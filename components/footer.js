@@ -19,13 +19,7 @@ export default function Footer() {
             <div>
               {" "}
               <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-                    <Image
-                      src="/img/icons8-i-96.png"
-                      alt="N"
-                      width="32"
-                      height="32"
-                      className="w-8"
-                    />
+                    
                   <span>Indic-Subtitler</span>
               </Link>
             </div>
