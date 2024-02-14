@@ -1,51 +1,42 @@
-import { useState } from "react";
-import Container from "./container";
+// components/Video.js
+
+import React from "react";
 
 const Video = () => {
-  const [playVideo, setPlayVideo] = useState(false);
-
-  const handleClick = (event) => {
-    event.preventDefault(); // Prevent the default behavior of the anchor element
-    setPlayVideo(!playVideo);
-  };
+  // Language names in respective scripts
+  const languageNames = [
+    "অসমীয়া",
+    "বাংলা",
+    "English ",
+    "ગુજરાતી",
+    "हिन्दी",
+    "ಕನ್ನಡ",
+    "മലയാളം",
+    "मराठी",
+    "اُردُو",
+    "ਪੰਜਾਬੀ",
+    "தமிழ்",
+    "తెలుగు",
+    "اُردُو",  // Last element
+  ];
 
   return (
-    <Container>
-      <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 rounded-2xl">
-        <div
-          onClick={handleClick}
-          className="relative bg-indigo-300 cursor-pointer aspect-w-16 aspect-h-9 bg-gradient-to-tr from-purple-400 to-indigo-700"
-        >
-          {!playVideo && (
-            <button className="absolute inset-auto w-16 h-16 text-white transform -translate-x-1/2 -translate-y-1/2 lg:w-28 lg:h-28 top-1/2 left-1/2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-16 h-16 lg:w-28 lg:h-28"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="sr-only">Play Video</span>
-            </button>
-          )}
-          {playVideo && (
-            <iframe
-              src="https://www.youtube.com/embed/your-video-id"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          )}
+    <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center"></h2>
+        <div className="flex flex-wrap -mx-2">
+          {languageNames.map((language, index) => (
+            <div key={index} className={`w-full sm:w-1/3 px-2 mb-4 ${index === languageNames.length - 1 ? 'sm:mx-auto' : ''}`}>
+              <div className="bg-blue-500 text-white p-5 rounded shadow text-center">
+                <h3 className="font-bold">{language}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
 export default Video;
+

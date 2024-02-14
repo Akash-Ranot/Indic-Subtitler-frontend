@@ -9,47 +9,29 @@ import userThreeImg from "../public/img/user3.jpg";
 const Testimonials  = () => {
   return (
     <Container>
-      <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
-        <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            Indic Subtitler transformed my content creation process. The seamless transcription and precise translations in my native language added a personal touch to my videos. It's a game-changer for creators!
-            </p>
-
-            <Avatar
-              image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
-            />
+      <div className="container mx-auto px-4 py-10 text-center">
+      <h2 className="text-4xl font-bold mb-6">How it Works</h2>
+      <div className="flex flex-wrap -mx-2 justify-center">
+        <div className="w-full sm:w-1/3 px-2 mb-4">
+          <div className="bg-blue-700 text-white p-5 rounded shadow text-center">
+            <div className="text-6xl mb-3">⬆️</div>
+            <h3 className="font-bold">Upload Video</h3>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            As someone who speaks multiple Indic languages, finding a subtitling platform that caters to my linguistic preferences was a relief. Indic Subtitler's accuracy in transcription and translation exceeded my expectations.
-            </p>
-
-            <Avatar
-              image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
-            />
+        <div className="w-full sm:w-1/3 px-2 mb-4">
+          <div className="bg-blue-700 text-white p-5 rounded shadow text-center">
+            <div className="text-6xl mb-3">⚙️</div>
+            <h3 className="font-bold">Generate Subtitles</h3>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            Indic Subtitler's open-source approach appealed to me. The community collaboration is evident in its continuous improvements. It's intuitive, efficient, and has become an indispensable tool for our diverse content team.
-            </p>
-
-            <Avatar
-              image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
-            />
+        <div className="w-full sm:w-1/3 px-2 mb-4">
+          <div className="bg-blue-700 text-white p-5 rounded shadow text-center">
+            <div className="text-6xl mb-3">⬇️</div>
+            <h3 className="font-bold">Download .srt/.vtt</h3>
           </div>
         </div>
       </div>
+    </div>
     </Container>
   );
 }

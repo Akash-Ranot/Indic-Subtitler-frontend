@@ -34,17 +34,12 @@ const Home = () => {
       <Benefits data={benefitOne} />
       
       <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
+        pretitle=""
+        title="languages  Supported">
        
       </SectionTitle>
       <Video />
-      <SectionTitle
-        pretitle="Reviews"
-        title="Here's what our users said">
-        
-        
-      </SectionTitle>
+     
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         
