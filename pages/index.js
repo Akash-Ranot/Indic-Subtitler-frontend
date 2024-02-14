@@ -26,6 +26,7 @@ const Home = () => {
 
       <Navbar />
       <Hero />
+      <Testimonials />
       <SectionTitle
         pretitle="Indic-Subtitler"
         title=" Why should you use ">
@@ -40,7 +41,7 @@ const Home = () => {
       </SectionTitle>
       <Video />
      
-      <Testimonials />
+     
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         
       </SectionTitle>
